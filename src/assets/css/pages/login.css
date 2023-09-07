@@ -1,0 +1,11 @@
+.login-wrap {display:flex;align-items:center;justify-content:center;height:calc(100vh - 93px);background:#f3daaa;}
+.login-form {width:100%;max-width:400px;padding:40px;background:#fff;border-radius:20px;box-shadow:10px 10px 10px rgba(0,0,0,.3)}
+.login-form .title {color:#333;text-align: center;}
+.login-form .title + .id-pw-wrap {margin-top:20px;}
+.login-form .find-wrap {display:flex;align-items:center;justify-content:space-between;color:#333;font-size:12px;margin-top:10px;}
+.login-form .find-wrap a {color:inherit}
+.login-form .find-wrap a:hover {text-decoration:underline}
+.login-form .error-msg-wrap {display:none;margin-top:10px;padding:10px;font-size:12px;line-height:1;color:#f70000;font-weight:700;}
+.login-form .btn-wrap {margin-top:30px;}
+
+.login-form .btn-wrap .btn + .btn {margin-top:10px;}

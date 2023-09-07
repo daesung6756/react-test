@@ -1,0 +1,22 @@
+.footer {background:#593419}
+.footer > .inner {
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:10px 20px;
+    font-size:12px;line-height:16px;
+    color:#fff;
+}
+.footer > .inner .social-list {
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
+}
+.footer > .inner .social-list A {
+    color:#fff;
+}

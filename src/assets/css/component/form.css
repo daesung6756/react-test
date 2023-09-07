@@ -1,0 +1,11 @@
+.input-set input:not([type=radio]),
+.input-set input:not([type=checkbox]) {display:block;width:100%;height:40px;text-indent: 10px;font-size:14px;color:#333;background:#fff;border:1px solid #ddd;}
+.input-set.hidden-label .label{display:none;}
+
+.radio,
+.checkbox {display:block;}
+span.radio,
+span.checkbox {display:inline-block;vertical-align: top;line-height:20px;height:20px;}
+.radio label,
+.checkbox label {vertical-align: top;font-size:12px;line-height:20px;}
+

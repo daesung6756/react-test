@@ -1,0 +1,6 @@
+.window-popup-wrap {display:none;position:fixed;width:100%;max-width:360px;z-index:100;border:2px solid #000}
+.window-popup-wrap.is-show{display:block;}
+.window-popup-wrap .body > a {display:block;}
+.window-popup-wrap .body > a img {display:block;width:100%;max-width:100%;}
+.window-popup-wrap .foot {background:#000;}
+.window-popup-wrap .foot-inner {padding:10px;display:flex;align-items: center;justify-content: space-between}

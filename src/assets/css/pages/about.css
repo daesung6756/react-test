@@ -1,0 +1,26 @@
+
+.about .visual-area {position:relative;overflow:hidden;}
+.about .visual-area .bg {position:absolute;top:0;left:0;width:100%;height:100%;animation :scaleBig 5s ease-in forwards;background-position: center bottom;background-size:cover;background-repeat:no-repeat;z-index:auto}
+.about .visual-area .bg::before {content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.3)}
+.about .visual-area .title{text-align:center;font-size:40px;padding:120px 0;color:#fff;}
+.about .visual-area > .inner {position:relative;max-width:1200px;margin: 0 auto;}
+.about .visual-area .pic {position:absolute;top:50%;right:10px;transform:translateY(-50%);max-width:300px}
+
+.about .section {padding:50px 0}
+.about .section > .inner {position:relative;margin:0 auto;max-width:1200px;}
+.about .section .title {text-align:center;}
+
+.about .history-section .tabs > .tab-control {display:flex;align-items: center;justify-content: space-between;gap:20px;}
+.about .history-section .tabs > .tab-control li {flex:1 1 0;}
+.about .history-section .tabs a {display:block;padding:15px 10px;font-size:15px;color:#333;font-weight:700;cursor:pointer;}
+.about .history-section .tabs a:hover{text-decoration: none;}
+.about .history-section .tabs .is-active a{background:#5A6378;color:#fff;}
+
+.about .history-group {padding-top:30px;}
+.about .history-group .history {position:relative;min-height:48px}
+.about .history-group .history .years {position:absolute;top:0;left:0;font-size:36px;line-height:1;color:#b02323;font-weight:900;letter-spacing: -.05em}
+.about .history-group .history dl {display:flex;align-items: flex-start;justify-items: flex-start;margin:0 0 0 20%}
+.about .history-group .history dl + dl {margin:20px 0 0 20%}
+.about .history-group .history .title {}
+.about .history-group .history .strong {color: #b02323}
+.about .history-group .history + .history {margin-top:20px;}
