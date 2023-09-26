@@ -1,0 +1,30 @@
+.title-wrap h1.title {font-size:56px;line-height:62px;}
+.title-wrap h2.title {font-size:50px;line-height:56px;}
+.title-wrap h3.title {font-size:46px;line-height:52px;}
+.title-wrap p.title {font-size:20px;line-height:26px;}
+.title-wrap .desc {font-size:16px;line-height:22px;}
+
+.section-title {padding:80px 0 30px;}
+
+.title  + .desc {margin-top:10px;}
+
+
+@media screen and (max-width:1023px){
+    .section-title {padding:70px 0 25px;}
+}
+
+@media screen and (max-width:768px){
+    .section-title {padding:50px 0 20px;}
+    .title-wrap h1.title {font-size:40px;line-height:46px;}
+    .title-wrap h2.title {font-size:32px;line-height:28px;}
+    .title-wrap p.title {font-size:16px;line-height:22px;}
+    .title-wrap .desc {font-size:14px;line-height:20px;}
+}
+
+@media screen and (max-width:480px){
+    .section-title {padding:30px 0 15px;}
+}
+
+@media screen and (max-width:320px) {
+    .section-title {padding:30px 0 10px;}
+}

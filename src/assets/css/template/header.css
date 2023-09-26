@@ -7,7 +7,7 @@
 /*    z-index:2;*/
 /*}*/
 .header {
-    background:#ab8a5e;
+    background: #4c4c4c;
     transition: background-color .3s ease-in;
 }
 .header > .inner {
@@ -47,6 +47,10 @@
     height:2px;
     background: #ffb600;
 }
+.header .gnb-list.is-hide,
+.header .util-list.is-hide{
+    display:none;
+}
 .header.is-fixed {
     position:fixed;
     top:0;
@@ -58,6 +62,25 @@
 }
 .header.move-in {
     animation: moveIn 0.3s ease-in;
+}
+.header .m-btn-group {
+    display:none;
+    font-size:0;
+}
+.header button {
+    border:0;
+    background:transparent;
+    max-width:50px;
+    padding:4px;
+    cursor: pointer;
+}
+.header button img {
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+.header .m-btn-group.is-show {
+    display:block;
 }
 
 @keyframes moveIn {

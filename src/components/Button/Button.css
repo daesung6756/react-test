@@ -1,0 +1,31 @@
+:root {
+    --btn-color-blue:#3d5a80;
+    --btn-color-red:#ee6c4d;
+    --btn-color-green:#0e9594;
+    --btn-color-grey:#ccc;
+}
+
+.btn {position:relative;display:inline-flex;align-items:center;color:#333;border:1px solid #333;cursor: pointer;height:2.5rem;padding-left:1rem;padding-right:1rem;font-size:.8rem;font-weight:700;line-height:1;background:#ddd;transition: background .2s linear}
+.btn:hover {transition: background .2s linear}
+.btn + .btn {margin-left:10px;}
+.btn.round {border-radius:4px;}
+.btn.wide {display:block;width:100%;}
+.btn.large { height: 2.5rem;font-size: 1rem;}
+.btn.medium {height: 2rem;font-size:0.8rem}
+.btn.small {  height: 1.5rem;font-size: 0.7rem;}
+.btn.blue {border-color:var(--btn-color-blue);background:var(--btn-color-blue);color:#fff;transition: all .2s linear}
+.btn.red {border-color:var(--btn-color-red);background:var(--btn-color-red);color:#fff;}
+.btn.green {border-color:var(--btn-color-green);background: var(--btn-color-green);color:#fff;}
+.btn.grey {border-color:var(--btn-color-grey);background: var(--btn-color-grey);color:#000;}
+.btn.blue.outline {color:var(--btn-color-blue)}
+.btn.red.outline {color:var(--btn-color-red)}
+.btn.green.outline {color:var(--btn-color-green)}
+.btn.grey.outline {color:var(--btn-color-grey)}
+.btn.blue:hover {border-color: var(--btn-color-blue);background:rgba(61, 90, 128, 0.6)}
+.btn.red:hover {border-color: var(--btn-color-red);background: rgba(238, 108, 77, 0.6)}
+.btn.green:hover {border-color: var(--btn-color-green);background:rgba(14, 149, 148, 0.6)}
+.btn.grey:hover {border-color: var(--btn-color-grey);background:rgba(204, 204, 204, 0.6)}
+.btn.outline,
+.btn.outline:hover {background:none;}
+
+.btn.wide {width: 100%;justify-content: center;}

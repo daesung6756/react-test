@@ -1,36 +1,202 @@
-.btn {display:inline-block;vertical-align: top;height:40px;font-size:14px;font-weight:700;background:#fff;color:#593419;border:2px solid #593419;cursor:pointer;}
-a.btn {text-align:center;border:2px solid #593419;line-height:40px;padding:0 10px}
-.btn.bg-primary {background:#593419;color:#fff;}
-.btn.bg-primary:hover {background: #734321}
-.size-wide {display:block;width:100%;}
+.left {text-align:left;}
+.center {text-align:center}
+.right {text-align:right;}
 
-@keyframes slideUp {
+.inner {max-width:1200px;margin:0 auto;}
+.section + .section {margin-top:50px;}
+
+.card-box {border-radius: 20px;-webkit-box-shadow:10px 10px 10px rgba(0,0,0,.3);box-shadow:10px 10px 10px rgba(0,0,0,.3);border:30px solid #e0e0e0;}
+.sub .visual-area {position:relative;height:300px;overflow:hidden;}
+.sub .visual-area .bg {padding-top:300px;-webkit-animation:scaleBig 3s linear forwards;animation:scaleBig 3s linear forwards;background-position:center center;background-size:cover;background-repeat:no-repeat;}
+.sub .visual-area .inner {position:absolute;top:50%;left:50%;font-size:40px;color:#fff;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+
+.ani-shake {-webkit-animation:shake .8s linear infinite;animation:shake .8s linear infinite;-webkit-animation-delay: 1s;animation-delay: 1s}
+.ani-bg span {-webkit-animation: cube 2s ease-in forwards infinite;animation: cube 2s ease-in forwards infinite;}
+.cube {position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;}
+.cube > div {position:relative;width:100%;height:100%;}
+.cube span{position: absolute;top: 80vh;left: 45vw;width: 10px;height: 10px;border: solid 1px rgba(0,0,0,.4);transform-origin: top left;transform: scale(0) rotate(0deg) translate(-50%, -50%);border-radius: 10px;}
+.cube span:nth-child(2) {-webkit-animation-delay: .5s;animation-delay: .5s;left: 25vw;top: 40vh;border-color: rgba(0,0,0,.6)}  .cube span:nth-child(3) {-webkit-animation-delay: 1s;animation-delay: 1s;left: 75vw;top: 50vh;border-color: rgba(0,0,0,.5)}
+.cube span:nth-child(4) {-webkit-animation-delay: 1.5s;animation-delay: 1.5s;left: 90vw;top: 10vh;border-color: rgba(0,0,0,.7)}
+.cube span:nth-child(5) {-webkit-animation-delay: 2s;animation-delay: 2s;left: 10vw;top: 85vh;border-color: rgba(0,0,0,.8)}
+.cube span:nth-child(6) {-webkit-animation-delay: 2.5s;animation-delay: 2.5s;left: 50vw;top: 10vh;border-color: rgba(0,0,0,.7)}
+.cube span:nth-child(7) {-webkit-animation-delay: .3s;animation-delay: .3s;left: 28vw;top: 24vh;border-color: rgba(0,0,0,.4)}
+.cube span:nth-child(8) {-webkit-animation-delay: .9s;animation-delay: .9s;left: 10vw;top: 46vh;border-color: rgba(0,0,0,.3)}
+.ani-twinkling {animation: twinkling 3s ease-in-out forwards}
+.ani-fullwidth {animation: fullwidth  ease-in-out forwards}
+.ani-none {animation:none}
+
+@-webkit-keyframes slideUp {
     to {
         opacity:1;
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
     from {
         opacity:0;
+        -webkit-transform: translateY(100%);
         transform: translateY(100%);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity:1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    from {
+        opacity:0;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+}
+
+@-webkit-keyframes slideRight {
+    to {
+        opacity:1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    from {
+        opacity:0;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
     }
 }
 
 @keyframes slideRight {
     to {
         opacity:1;
+        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
     from {
         opacity:0;
+        -webkit-transform: translateX(100%);
         transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes scaleBig {
+    to {
+        -webkit-transform: scale3d(1.1,1.1,1.1);
+        transform: scale3d(1.1,1.1,1.1);
+    }
+    from {
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
     }
 }
 
 @keyframes scaleBig {
     to {
+        -webkit-transform: scale3d(1.1,1.1,1.1);
         transform: scale3d(1.1,1.1,1.1);
     }
     from {
+        -webkit-transform: scale3d(1,1,1);
         transform: scale3d(1,1,1);
     }
+}
+
+@-webkit-keyframes shake {
+    0%,10%,20%,30%,40%, 50% {
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+    }
+    5%,15%,25%,35%,45% {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    51%, 100%{
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+}
+
+@keyframes shake {
+    0%,10%,20%,30%,40%, 50% {
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+    }
+    5%,15%,25%,35%,45% {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    51%, 100%{
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+}
+
+@-webkit-keyframes twinkling {
+    0%,20%,40%,60%,80%,100% {
+        opacity:0;
+    }
+    10%,30%,50%,70%,90% {
+        opacity:1;
+    }
+}
+
+@keyframes twinkling {
+    0%,20%,40%,60%,80%,100% {
+        opacity:0;
+    }
+    10%,30%,50%,70%,90% {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+@keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fullwidth {
+    form {
+        width:0;
+    }
+    to {
+        width:100%;
+    }
+}
+@keyframes fullwidth {
+    form {
+        width:0;
+    }
+    to {
+        width:100%;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .section + .section {margin-top:40px;}
+}
+
+@media screen and (max-width:768px) {
+    .section + .section {margin-top:30px;}
+}
+
+@media screen and (max-width:480px) {
+    .section + .section {margin-top:20px;}
+}
+@media screen and (max-width:320px) {
+    .section + .section {margin-top:10px;}
 }

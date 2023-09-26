@@ -6,9 +6,7 @@ const SubLayout = () => {
     return (
         <>
             <Header />
-
             <Outlet />
-
             <Footer />
         </>
     )

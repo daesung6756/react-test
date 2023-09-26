@@ -1,0 +1,30 @@
+.card {box-shadow:10px 10px 10px rgba(0,0,0,.3);}
+.card.is-round {border-radius:1rem;overflow:hidden;}
+
+.card .pic {height:0;padding-top:45.25%;background-repeat: no-repeat;background-position: center top;background-size:100%;transition: background .3s linear}
+.card .pic:hover {background-size:120%;transition: background .3s linear}
+.card .pic + .desc {margin-top:10px;}
+.card .title {padding:.3rem 1rem;font-size:.8rem;line-height:1.1rem;font-weight:700;background:#ff5722;color:#fff;}
+.card .title span {margin-left:10px;}
+.card .desc {font-size:.7rem;line-height:1rem;padding:0 1rem 0;height:80px;overflow:hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;}
+.card .link {padding:1rem 0 1rem;}
+.card .link a {display:block;text-align:center;background:#0574f6;color:#fff;height:35px;line-height:35px;font-size:.6rem;max-width:120px;margin:0 auto;border-radius:1rem;transition: background .3s linear}
+.card .link a:hover {background-color: #2992ff;transition: background .3s linear}
+
+@media screen and (max-width:1023px) {
+    .card .title {font-size:15px}
+    .card .desc {font-size:14px}
+}
+
+@media screen and (max-width:768px) {
+    .card .title {font-size:14px}
+    .card .desc {font-size:13px;line-height:19px;height:57px;-webkit-line-clamp: 3;}
+
+}
+
+@media screen and (max-width:480px) {
+    .card .title {font-size:13px}
+    .card .desc {font-size:12px;line-height:18px;height:36px;-webkit-line-clamp: 2}
+}
+@media screen and (max-width:320px) {
+}

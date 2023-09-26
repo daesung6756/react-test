@@ -1,0 +1,36 @@
+.history .content {padding: 0 0 50px}
+.history .visual-area .desc {font-size:12px;text-align: center;margin-top:0}
+.history .history-wrap {padding-top:100px;}
+.history .history-list {position:relative;}
+.history .history-list::before {content:"";position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:url("../../images/black-person.png") center center/contain no-repeat;width:50px;height:80px;animation:working 1.2s infinite;transform-origin: center}
+.history .history-list > li {position: relative;text-align:right;}
+.history .history-list > li + li {padding-top:50px;}
+.history .history-list > li::before {content:"";position:absolute;top:0;left:50%;width:4px;height:100%;transform:translateX(-50%);background:#333;}
+.history .history-list > li:nth-child(2n) {text-align: left;}
+.history .history-list > li .years{margin:0 calc(50% + 20px) 0 0;}
+.history .history-list > li:nth-child(2n) .years{margin:0 0 0 calc(50% + 20px);}
+.history .history-list > li .years::before {content:"";position:absolute;top:50%;left:100%;transform:translateY(-50%);width:30px;height:30px;border:5px solid #333;border-radius:50%;background:#fff;}
+.history .history-list > li .years::after {content:"";position:absolute;top:50%;left:calc(100% + 15px);transform:translateY(-50%);width:10px;height:10px;background:#333;border-radius:50%;}
+.history .history-list > li:nth-child(2n) .years::before {left:auto;right:100%;}
+.history .history-list > li:nth-child(2n) .years::after{left:auto;right:calc(100% + 15px)}
+.history .history-list dl {margin:0 0 0 calc(50% + 20px);text-align: left;}
+.history .history-list dl:nth-child(2n) {text-align:right;margin:0 calc(50% + 20px) 0 0}
+.history .history-list dl + dl {margin-top:50px;}
+.history .history-list dd {margin:10px 0 0 0;}
+.history .history-list dl .month::before {left:auto;right:calc(100% + 15px);}
+.history .history-list dl:nth-child(2n) .month::before {left:calc(100% + 15px)}
+.history .history-list .years {position:relative;font-size:50px;line-height:56px;font-weight:700;}
+.history .history-list .month {position:relative;font-size:30px;line-height:36px;font-weight:700;}
+.history .history-list .month::before {content:"";position:absolute;top:50%;width:10px;height:4px;background:#333}
+.history .history-list .title {font-size:20px;line-height:26px;font-weight:700;}
+.history .history-list .pic {display:flex;margin-top:10px;gap:10px;align-items: flex-start;justify-content: flex-end}
+.history .history-list .pic img {max-width:200px;}
+.history .history-list .work-list {margin:10px 0 0;padding:10px 0 0;font-size:14px;border-top:1px dotted #aaa;}
+
+@keyframes working {
+    0% {transform:rotate(0deg) translateX(-50%)}
+    25% {transform:rotate(1deg) translateX(-50%)}
+    50% {transform:rotate(0deg) translateX(-50%)}
+    75% {transform:rotate(-1deg) translateX(-50%)}
+    100% {transform:rotate(0deg) translateX(-50%)}
+}

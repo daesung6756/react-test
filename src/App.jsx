@@ -6,8 +6,8 @@ import SimpleLayout from "./template/simple/layout.jsx";
 import AdminLayout from "./template/admin/layout.jsx";
 import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
-import About from './pages/About.jsx';
-import Support from './pages/Support.jsx';
+import Favorite from './pages/Favorite.jsx';
+import History from './pages/History.jsx';
 import Admission from './pages/Admission.jsx';
 import DepartmentInfo from './pages/DepartmentInfo.jsx';
 import GraduateSchool from './pages/GraduateSchool.jsx';
@@ -25,8 +25,8 @@ const App = () => {
                 <Route index element={<Home />} exact></Route>
             </Route>
             <Route path="/" element={<SubLayout />}>
-                <Route path="about" element={<About />}></Route>
-                <Route path="support" element={<Support />}></Route>
+                <Route path="favorite" element={<Favorite />}></Route>
+                <Route path="history" element={<History />}></Route>
                 <Route path="admission" element={<Admission />}></Route>
                 <Route path="department-info" element={<DepartmentInfo />}></Route>
                 <Route path="graduate-school" element={<GraduateSchool />}></Route>
