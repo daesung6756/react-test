@@ -1,7 +1,7 @@
 {
   "name": "react-tb",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://daesung6756.github.io/react-profile/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,6 +9,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

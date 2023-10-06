@@ -23,10 +23,10 @@ const App = () => {
     return (
     <>
         <Routes>
-            <Route path="/" element={<MainLayout />}>
+            <Route exact path="/" element={<MainLayout />}>
                 <Route index element={<Home />} exact></Route>
             </Route>
-            <Route path="/" element={<SubLayout />}>
+            <Route exact path="/" element={<SubLayout />}>
                 <Route path="favorite" element={<Favorite />}></Route>
                 <Route path="history" element={<History />}></Route>
                 <Route path="admission" element={<Admission />}></Route>
@@ -41,7 +41,6 @@ const App = () => {
             <Route path="/admin" element={<AdminLayout />}></Route>
             <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
-
         <ScrollTop />
     </>
   )

@@ -3,11 +3,10 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  //base:"/react-test/",
+  base:"/react-profile/",
   plugins: [react()],
   build: {
     root:'src',
     emptyOutDir: true,
-    outDir: './docs'
   },
 })

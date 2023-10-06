@@ -6,50 +6,52 @@
 /*    background:rgba(0,0,0,.2);*/
 /*    z-index:2;*/
 /*}*/
-.header {
-    background: #4c4c4c;
-    transition: background-color .3s ease-in;
-}
-.header > .inner {
-    width:100%;
-    max-width:1200px;
-    margin:0 auto;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:0 20px;
-}
+.header {background: #4c4c4c;transition: background-color .3s ease-in;}
+.header > .inner {width:100%;max-width:1200px;margin:0 auto;display:flex;align-items: center;justify-content: space-between;padding:0 20px;}
 
 .header > .inner .gnb-list,
-.header > .inner .util-list {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap:10px;
-}
+.header > .inner .util-list {display:flex;align-items: center;justify-content: center;gap:10px;}
 
-.header > .inner .gnb-list a {
-    font-weight:700;
-    padding:20px 0;
-    color:#fff;
-}
-.header .gnb-list a.is-active {
-    position:relative;
-    display:block;
-    color: #ffb600
-}
-.header .gnb-list a.is-active::before {
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
+.header > .inner .gnb-list a {font-weight:700;padding:20px 0;color:#fff;}
+.header .gnb-list a.is-active {position:relative;display:block;color: #ffb600}
+.header .gnb-list a.is-active::before {content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background: #ffb600;}
+.header .gnb-list.is-mobile,
+.header .util-list.is-mobile {
+    position:fixed;
+    top:50px;
+    right:0;
     width:100%;
-    height:2px;
-    background: #ffb600;
+    max-width:300px;
+    height:calc(100% - 50px);
+    background:#333;
+    transform: translateX(100%);
+    opacity:0;
+    z-index:-1;
+    color:#fff;
+    transition: all .3s ease-out;
 }
-.header .gnb-list.is-hide,
-.header .util-list.is-hide{
-    display:none;
+.header .gnb-list.is-mobile.is-show,
+.header .util-list.is-mobile.is-show {
+    transform: translateX(0);
+    opacity:1;
+    z-index:99;
+    transition: all .3s ease-in;
+
+}
+.header .gnb-list.is-mobile {
+
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.header .gnb-list.is-mobile li {
+    width:100%
+}
+.header .gnb-list.is-mobile a {
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:10px;
 }
 .header.is-fixed {
     position:fixed;
@@ -79,7 +81,7 @@
     width:100%;
     max-width:100%;
 }
-.header .m-btn-group.is-show {
+.header .m-btn-group.is-mobile {
     display:block;
 }
 
