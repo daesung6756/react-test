@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
+import {ScrollTop} from "./components/scroll-top.jsx";
+
 import MainLayout from "./template/main/layout.jsx";
 import SubLayout from "./template/sub/layout.jsx";
 import SimpleLayout from "./template/simple/layout.jsx";
@@ -39,6 +41,8 @@ const App = () => {
             <Route path="/admin" element={<AdminLayout />}></Route>
             <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
+
+        <ScrollTop />
     </>
   )
 }

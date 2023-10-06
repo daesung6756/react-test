@@ -1,3 +1,8 @@
+
+.home .swiper-pagination {max-width: 110px;left: 50% !important;transform: translateX(-50%);line-height: 1;font-size: 0;display: flex;flex-wrap: wrap}
+.home .swiper-pagination-clickable .swiper-pagination-bullet {width:16px;height:16px;border-radius: 0;margin:1px !important}
+.home .swiper-pagination-bullet.swiper-pagination-bullet-active {background:rgba(0,0,0,.6) }
+
 /* visual swiper */
 .visual-area {position:relative;}
 .visual-area .swiper .swiper-slide {position:relative;}
@@ -18,9 +23,6 @@
 .visual-area .swiper-rtl .swiper-button-next,
 .visual-area .swiper-rtl .swiper-button-prev {width:50px !important;height:50px !important;border-radius: 50%;font-size:20px;color:#fff;background:rgba(0,0,0,.3)}
 .visual-area .swiper-button-prev:after, .swiper-button-next:after {color:#fff !important;font-size:20px !important;}
-.visual-area .swiper-pagination {max-width: 110px;left: 50% !important;transform: translateX(-50%);line-height: 1;font-size: 0;display: flex;flex-wrap: wrap}
-.visual-area .swiper-pagination-clickable .swiper-pagination-bullet {width:16px;height:16px;border-radius: 0;margin:1px !important}
-.visual-area .swiper-pagination-bullet.swiper-pagination-bullet-active {background:rgba(0,0,0,.6) }
 .visual-area .swiper-player {position:absolute;bottom:8px;right:10px;margin-left:66px;z-index:3;}
 .visual-area .swiper-player button {width:20px;height:20px;background:rgba(0,0,0,.6);border:0;}
 .visual-area .swiper-player-status {position: absolute;top: 60px;left:50%;z-index: 2;transform:translateX(-50%);font-size: 1rem;color: rgba(255,255,255,.6);background:rgba(0,0,0,0.2);padding: 3px 10px 5px;border-radius: 1rem;line-height: 1;opacity:0;}
@@ -30,15 +32,65 @@
 
 .useful .swiper {padding:30px 0 50px;}
 .useful .swiper-wrapper {align-items: center;}
-.useful .swiper .swiper-slide {padding:20px;transition: transform .3s ease-in,opacity .3s ease-in;opacity:.4}
+.useful .swiper .swiper-slide {transition: transform .3s ease-in,opacity .3s ease-in;opacity:.4;cursor:pointer}
 .useful .swiper .swiper-slide .title {background-color:#aaa;transition: background-color .3s linear}
-.useful .swiper .swiper-slide.swiper-slide-active {transform: scale(1.2);transition: transform .3s ease-in,opacity .3s ease-in;opacity:1}
+.useful .swiper .swiper-slide.swiper-slide-active {transform: scale(1.2);transition: transform .3s ease-in,opacity .3s ease-in;opacity:1;z-index:1;}
 .useful .swiper .swiper-slide.swiper-slide-active .title {background:#0574f6;transition: background-color .3s linear}
 .useful .swiper .swiper-pagination {top:auto;bottom:0;}
 .useful .swiper .swiper-pagination-bullet {width: 16px;height: 16px;border-radius: 0;margin: 1px !important;}
 .useful .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {background:rgba(0,0,0,.6) }
-.home {}
 
+.extension-tools {background:#efefef}
+.extension-tools .swiper {padding-bottom:50px;max-width:600px;margin:0 auto;}
+.extension-tools .swiper-slide {background:#fff;padding:20px;border-radius:1rem;cursor:pointer;}
+.extension-tools .swiper-slide.swiper-slide-active {box-shadow:10px 10px 10px rgba(0,0,0,.3);background:#0574f6;color:#fff;}
+.extension-tools .swiper-slide .title {display:flex;align-items: center;justify-content: flex-start;gap:5px;}
+.extension-tools .swiper-slide .title span{font-size:24px;font-weight:700;}
+.extension-tools .swiper-slide .desc {padding:20px;font-size:16px;background:#fff;color:#333;}
+.extension-tools .swiper-slide .link a{font-size:16px;color:inherit;}
+.extension-tools .swiper-slide .link a:hover{text-decoration: underline}
+.extension-tools .swiper-slide .link svg {margin-right:5px;}
+
+.consolation {position:relative;background: #370f71;}
+.consolation > #canvas {position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;opacity:.4}
+.consolation .section-title {color:#fff;padding:80px 20px 30px}
+.consolation .consolation-wrap {display:flex;flex-direction: column;gap:20px;}
+.consolation .button-wrap {position:relative;left:auto;top:auto;transform: translate(0);text-align: center;order:2;z-index:3}
+.consolation .button-wrap > button {width:120px;height:40px;background:#1e0f35;border:0;box-shadow:10px 10px 10px rgba(0,0,0,.3)}
+.consolation .circle-wrap {position:relative;width:400px;height:400px;margin:0 auto;overflow:hidden;}
+.consolation .circle-wrap::before {content:"";position: absolute;top:0;left:0;width:100%;height:100%;background:url("../../images/bg/crystal-ball.png") center center/contain no-repeat;animation: turnLoop 100s linear infinite;opacity:.5;transition:opacity 1s ease-out}
+.consolation .circle-wrap.is-ani::before {opacity:.8;transition:opacity 1s ease-in}
+.consolation .msg-wrap {position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);z-index:2;max-width:240px;text-align:center;width:200px;height:200px;}
+.consolation .msg-wrap .position-wrap {position:relative;width:100%;height:100%;display:flex;align-items: center;justify-content: center;}
+.consolation .msg-wrap .msg{display:block;text-align:center;font-weight:700;letter-spacing: -0.025em;padding:20px;font-size:13px;transition:transform .1s ease-in;animation: slideScaleUp .3s ease-in forwards}
+.consolation .msg-wrap .msg.is-hide {animation:scaleHide 1s ease-out forwards}
+
+@keyframes turnLoop {
+    to{
+        transform: rotate(720deg);
+    }
+    from {
+        transform: rotate(0deg);
+    }
+}
+@keyframes slideScaleUp {
+    to {
+        opacity:1;
+        transform:translateY(0) scale(1.4);
+    }
+    from {
+        opacity:0;
+        transform:translateY(100%) scale(1);
+    }
+}
+@keyframes scaleHide {
+    to {
+        transform: scale(0);
+    }
+    from {
+        transform: scale(1);
+    }
+}
 
 @media screen and (max-width:1023px){
     .visual-area .context-box .title {font-size:32px;line-height:38px}
@@ -50,11 +102,22 @@
 @media screen and (max-width:768px){
     .visual-area .context-box .title {font-size:28px;line-height:34px}
     .visual-area .context-box .desc {font-size:14px;line-height:20px}
+
+    .extension-tools .swiper {padding:0 50px 30px;overflow:hidden;}
+    .extension-tools .swiper-slide .desc {font-size:14px;}
+
+
+    .consolation .post-board {padding:0;height:300px;order:1}
 }
 
 @media screen and (max-width:480px){
-    .useful .swiper {padding-top:0;}
+    .useful .swiper,
+    .extension-tools .swiper {padding:0 20px 50px}
+    .extension-tools .swiper {overflow:hidden}
     .useful .swiper .swiper-slide.swiper-slide-active {transform: scale(1)}
+
+    .consolation .circle-wrap {width:100%;min-width:240px;max-width:440px;height:100%;min-height:240px;max-height:440px;}
+
 }
 
 @media screen and (max-width:320px) {

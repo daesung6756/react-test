@@ -1,8 +1,9 @@
 .history .content {padding: 0 0 50px}
 .history .visual-area .desc {font-size:12px;text-align: center;margin-top:0}
 .history .history-wrap {padding-top:100px;}
+.history .history-list-wrap {position:relative;}
+.history .history-list-wrap .person {position:absolute;top:-80px;left:50%;transform:translateX(-50%);background:url("../../images/history/black-person.png") center center/contain no-repeat;width:50px;height:80px;animation:working 1.2s infinite;transform-origin: center;z-index:1;transition: top .3s ease-in}
 .history .history-list {position:relative;}
-.history .history-list::before {content:"";position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:url("../../images/black-person.png") center center/contain no-repeat;width:50px;height:80px;animation:working 1.2s infinite;transform-origin: center}
 .history .history-list > li {position: relative;text-align:right;}
 .history .history-list > li + li {padding-top:50px;}
 .history .history-list > li::before {content:"";position:absolute;top:0;left:50%;width:4px;height:100%;transform:translateX(-50%);background:#333;}
