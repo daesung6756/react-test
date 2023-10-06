@@ -6,6 +6,8 @@ export default defineConfig({
   //base:"/react-test/",
   plugins: [react()],
   build: {
+    root:'src',
     emptyOutDir: true,
+    outDir: './docs'
   },
 })

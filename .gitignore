@@ -12,7 +12,7 @@ dist-ssr
 *.local
 
 #folder
-/dist
+/doce
 
 
 # Editor directories and files
