@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useReducer, useState} from "react";
 
 import "../assets/css/component/scroll-top.css"
 

@@ -39,3 +39,16 @@
 .history-tab .tab-control li a:hover{text-decoration: none;}
 .history-tab .tab-control .is-active a {background:#5A6378;color:#fff;}
 .history-tab .tab-container {padding-top:40px}
+
+@media screen and (max-width:1023px) {
+    .tab-control {overflow:hidden;overflow-x:auto;}
+    .tab-control li {min-width:120px;}
+}
+@media screen and (max-width:768px) {
+
+}
+
+@media screen and (max-width:480px) {
+
+}
+

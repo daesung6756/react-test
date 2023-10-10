@@ -16,10 +16,10 @@ const Footer  = () => {
                 </div>
                 <div className="right">
                     <ul className="social-list">
-                        <li><a href=""><FontAwesomeIcon icon={faYoutube} size="2x"/></a></li>
-                        <li><a href=""><FontAwesomeIcon icon={faInstagram} size="2x"/></a></li>
-                        <li><a href=""><FontAwesomeIcon icon={faFacebook} size="2x"/></a></li>
-                        <li><a href=""><FontAwesomeIcon icon={faTwitter} size="2x"/></a></li>
+                        <li><a href="src/template/common/footer.jsx"><FontAwesomeIcon icon={faYoutube} size="2x"/></a></li>
+                        <li><a href="src/template/common/footer.jsx"><FontAwesomeIcon icon={faInstagram} size="2x"/></a></li>
+                        <li><a href="src/template/common/footer.jsx"><FontAwesomeIcon icon={faFacebook} size="2x"/></a></li>
+                        <li><a href="src/template/common/footer.jsx"><FontAwesomeIcon icon={faTwitter} size="2x"/></a></li>
                     </ul>
                 </div>
             </div>

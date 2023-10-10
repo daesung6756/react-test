@@ -1,10 +1,10 @@
-import Footer from "./footer.jsx";
+import Header from "../common/header.jsx";
+import Footer from "../common/footer.jsx";
 import '../../assets/css/template/layout.css'
-import Header from "./header.jsx";
 import {Outlet} from "react-router-dom";
 
 
-const MainLayout = (props) => {
+const MainLayout = () => {
 
     return(
         <>

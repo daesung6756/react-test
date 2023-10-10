@@ -1,11 +1,3 @@
-/*.header {*/
-/*    position:fixed;*/
-/*    top:0;*/
-/*    left:0;*/
-/*    width:100%;*/
-/*    background:rgba(0,0,0,.2);*/
-/*    z-index:2;*/
-/*}*/
 .header {background: #4c4c4c;transition: background-color .3s ease-in;}
 .header > .inner {width:100%;max-width:1200px;margin:0 auto;display:flex;align-items: center;justify-content: space-between;padding:0 20px;}
 
@@ -85,14 +77,6 @@
     display:block;
 }
 
-@keyframes moveIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    from {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-
+@media screen and (max-width:1023px) {
+    .header > .inner {padding:0 0 0 20px;}
 }

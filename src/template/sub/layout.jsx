@@ -1,5 +1,5 @@
-import Header from "./header.jsx";
-import Footer from "./footer.jsx";
+import Header from "../common/header.jsx";
+import Footer from "../common/footer.jsx";
 import {Outlet} from "react-router-dom";
 
 const SubLayout = () => {
