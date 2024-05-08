@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, EffectCoverflow } from 'swiper/modules';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPause, faPlay, faCaravan, faCode, faHouseChimneyUser, faPlus, faCamera, faSyringe,faLink,faFont} from "@fortawesome/free-solid-svg-icons"
+import { faChartSimple,faPause, faPlay, faCaravan, faCode, faHouseChimneyUser, faPlus, faCamera, faSyringe,faLink,faFont} from "@fortawesome/free-solid-svg-icons"
 import {faJs, faCss3Alt, faNode, faReact, faGithub, faSass, faVuejs, faGulp,faSalesforce} from "@fortawesome/free-brands-svg-icons"
 library.add(faPause, faPlay, faCaravan, faJs,faCss3Alt,faCode, faNode,faReact,faGithub, faSass, faVuejs, faGulp, faSalesforce,faHouseChimneyUser, faPlus, faCamera, faSyringe,faLink,faFont)
 
@@ -146,20 +146,38 @@ const Home = () =>  {
             background:"#008fff",
         },
         {
-            title: "Marketing Cloud Account Engagement",
-            desc: "Salesforce B2B Solution / engagement studio, form, form handler, landing page ...",
-            dir: "center",
+            title: "Marketing Cloud Engagement",
+            desc: "Salesforce B2C Solution / journey builder, web builder, email studio, cloud page ...",
+            dir: "left",
+            color:"#333",
+            icon: faSalesforce,
+            background:"#f49800",
+            iconColor:"#fff"
+        },
+        {
+            title: "Marketing Cloud Personalization",
+            desc: "Salesforce B2C Solution / Web and App Analytics Platform, dynamic content, Segmentation, Campaign...",
+            dir: "right",
+            color:"#333",
+            icon: faSalesforce,
+            background:"#f49800",
+            iconColor:"#fff"
+        },
+        {
+            title: "Marketing Cloud Account Engagement (pardot)",
+            desc: "Salesforce B2B Solution / Automate the customer journey, manage your prospects, Helps increase the effectiveness of marketing campaigns...",
+            dir: "right",
             color:"#fff",
             icon: faSalesforce,
             background:"#008fff",
             iconColor:"#fff"
         },
         {
-            title: "Marketing Cloud Engagement",
-            desc: "Salesforce B2C Solution / journey builder, web builder, email studio, cloud page ...",
-            dir: "left",
+            title: "GA4",
+            desc: "Web and App Analytics Platform / behavioral data tracking ,Integrated analysis",
+            dir: "center",
             color:"#333",
-            icon: faSalesforce,
+            icon: faChartSimple,
             background:"#f49800",
             iconColor:"#fff"
         },
@@ -270,6 +288,7 @@ const Home = () =>  {
             icon:faFirebase,
             iconColor:"#fff"
         },
+
     ]
     const usefulArray = [
         {

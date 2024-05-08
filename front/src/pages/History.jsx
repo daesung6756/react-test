@@ -7,8 +7,84 @@ import visualImage from "../assets/images/visual/history-visual01.jpg";
 const History = () =>{
     const historyList = [
         {
+            years:"2024",
+            projects :[
+                {
+                    id:49,
+                    month:"05",
+                    title: "MCE(Marketing Cloud Engagement) Journey Builder 연계 / 외부 사이트의 고객 식별 행동데이터 추적 SI 작업 및 테스트",
+                    src:[],
+                    lists: [
+                        '개발 환경 구축 ( Node )',
+                        'Server 구축 및 배포 (Render)',
+                        'MCE Journey Builder 및 DE 제작',
+                        '외부 사이트 환경 고객 식별 로직, REST API 작업',
+                    ]
+                },
+                {
+                    id:48,
+                    month:"04",
+                    title: "MCE(Marketing Cloud Engagement) Journey Builder 내부 Custom Activity 카카오톡/문자메시지 전송 UI 제작",
+                    src:[],
+                    lists: [
+                        '개발 환경 구축 (Node)',
+                        'Server 구축 및 배포 (Render)',
+                        '알림톡/친구톡/문자메시지 전송 관련 UI 설계',
+                        '알림톡/친구톡/문자메시지 전송 관련 UI 제작 (빌드 없는 CommonJs 모듈 형태)',
+                        '미완료 상태'
+                    ]
+                },
+                {
+                    id:47,
+                    month:"03",
+                    title: "MCP(Marketing Cloud Personalization) 활용하여 The START 사이트 분석 및 캡쳐 & 다이나믹컨텐츠 활용",
+                    src:[],
+                    lists: [
+                        'MCP 비콘파일 컨트롤하는 자바스크립트 설정',
+                        '익명의 접속자 고객 식별 작업',
+                        'SPA에 대한 데이터 캡쳐 방법 연구',
+                        'Automation USER 정보 ETL 처리',
+                        '다이나믹 컨텐츠 제작 및 노출 5가지 타입',
+                    ]
+                },
+                {
+                    id:46,
+                    month:"02",
+                    title: "MCE(Marketing Cloud Engagement) Journey Builder : Entry (API Event) Data Intergration Test",
+                    src:[],
+                    lists: [
+                        'DE 및 Journey Builder 제작',
+                        'REST API 테스트 (Postman 활용)',
+                    ]
+                },
+                {
+                    id:45,
+                    month:"01",
+                    title: "MCE(Marketing Cloud Engagement) Journey Builder : Entry (API Event) Data Intergration Test",
+                    src:[],
+                    lists: [
+                        'DE 및 Journey Builder 제작',
+                        'REST API 테스트 (Postman 활용)',
+                    ]
+                },
+            ]
+        },
+        {
             years:"2023",
             projects :[
+                {
+                    id:44,
+                    month:"12",
+                    title: "SC(Sales Cloud) or DB(Data Base)의 대용량 데이터 MCE FTP DE화 Automation tool 자동화 처리 구현",
+                    src:[],
+                    lists: [
+                        'MCE FTP 계정 생성',
+                        'Automation File Drop 트리거로 자동화 로직 구현',
+                        '파일질라 프로그램 활용 파일 드랍 상황 테스트 진행',
+                        '42만건 레코드 정상 등록 확인 (라이센스 문제 일 수도)',
+                        '레코드내 누락되는 필드 케이스 분석 및 자료화'
+                    ]
+                },
                 {
                     id:43,
                     month:"09",
