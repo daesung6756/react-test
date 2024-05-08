@@ -24,9 +24,9 @@ const Login = () => {
                         </span>
                     </div>
                     <div>
-                        <a href="#">아이디찾기</a>
+                        <a href="front/src/pages/Login.jsx#">아이디찾기</a>
                         <span> | </span>
-                        <a href="#">비밀번호찾기</a>
+                        <a href="front/src/pages/Login.jsx#">비밀번호찾기</a>
                     </div>
                 </div>
                 <p className="error-msg-wrap" id="errorCapslock" style={{display:"block"}}>CapsLock이 켜져있습니다.</p>
@@ -34,7 +34,7 @@ const Login = () => {
                 <p className="error-msg-wrap" id="errorEmptyPw">비밀번호를 입력해주세요.</p>
                 <div className="btn-wrap">
                     <button type="submit" className="btn size-wide bg-primary">로그인</button>
-                    <a href="#" className="btn size-wide">회원가입</a>
+                    <a href="front/src/pages/Login.jsx#" className="btn size-wide">회원가입</a>
                 </div>
             </form>
         </div>

@@ -18,8 +18,6 @@ const App = () => {
 
     return (
     <>
-
-
         <Routes>
             <Route exact path="/" element={<MainLayout />}>
                 <Route index element={<Home />} exact></Route>

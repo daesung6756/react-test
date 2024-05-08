@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Titles } from "../components/Titles/index";
-import { Card } from "../components/Card/index";
+import { Titles } from "../components/Titles/index.jsx";
+import { Card } from "../components/Card/index.jsx";
 import Canvas from "../components/canvas.jsx";
 
 import { Pagination, Autoplay } from 'swiper/modules';

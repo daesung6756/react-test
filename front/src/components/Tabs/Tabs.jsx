@@ -12,7 +12,7 @@ const Tabs = ({children}) => {
             <ul className={`tab-control`}>
                 {
                     children.map((btn)=> {
-                        return <li className={btn.props.label === activeTab ? "is-active":""} key={btn.props.label}><a href="#" onClick={(e)=> handleClick(e,btn.props.label)}>{btn.props.label}</a></li>
+                        return <li className={btn.props.label === activeTab ? "is-active":""} key={btn.props.label}><a href="front/src/components/Tabs/Tabs.jsx#" onClick={(e)=> handleClick(e,btn.props.label)}>{btn.props.label}</a></li>
                     })
                 }
             </ul>
