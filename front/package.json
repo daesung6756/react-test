@@ -4,6 +4,7 @@
   "homepage": "https://daesung6756.github.io/react-profile/",
   "version": "0.0.0",
   "type": "module",
+  "proxy": "http://127.0.0.1:8000/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -27,7 +28,9 @@
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
+    "axios": "^1.6.8",
     "classname": "^0.0.0",
+    "dotenv": "^16.4.5",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",

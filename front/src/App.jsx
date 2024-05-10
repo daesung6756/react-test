@@ -10,6 +10,7 @@ import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
 import Favorite from './pages/Favorite.jsx';
 import History from './pages/History.jsx';
+import Experience from './pages/Experience.jsx';
 import PageNotFound from "./pages/PageNotFound.jsx";
 
 import './globalStyle.css'
@@ -21,6 +22,9 @@ const App = () => {
         <Routes>
             <Route exact path="/" element={<MainLayout />}>
                 <Route index element={<Home />} exact></Route>
+            </Route>
+            <Route exact path="/" element={<MainLayout />}>
+                <Route path="experience" element={<Experience />} exact></Route>
             </Route>
             <Route exact path="/" element={<SubLayout />}>
                 <Route path="favorite" element={<Favorite />}></Route>

@@ -50,23 +50,24 @@ const Header = () => {
 
     return (
         <>
-            <MobileGnb resizeClass={`${ 1023 > resizeWidth ? "is-mobile" : "" } ${mobileNavStatus ? "is-show" : ""}`} getNavStatus={getNavStatus} />
+            <MobileGnb resizeClass={`${ resizeWidth ? "is-mobile" : "" } ${mobileNavStatus ? "is-show" : ""}`} getNavStatus={getNavStatus} />
 
             <header className={`header sub ${scrollPosition > 50 ? "is-fixed move-in" : ""}`}>
                 <div className="inner">
                     <div className="left">
+                        <button type="button" onClick={mobileGnbOpenEvent}><img src={ hamBtnWhiteIcon } alt="navigation" /></button>
                         <h1><Link to="/" title="현재창이동"><img src={logoImg} /></Link></h1>
                     </div>
-                    <div className="center">
+                  {/*  <div className="center">
                         <Gnb resizeClass={`${ 1023  > resizeWidth ? "is-mobile" : "" }`}/>
                     </div>
                     <div className="right">
                         <Util resizeClass={`${ 1023  > resizeWidth ? "is-mobile" : "" } `}/>
                         <span className={`m-btn-group ${ 1023  > resizeWidth ? "is-mobile" : "" }`}>
-                            <button type="button" onClick={mobileGnbOpenEvent}><img src={ hamBtnWhiteIcon } alt="navigation" /></button>
+
                             <button type="button" ><img src={ moreBtnWhiteIcon } alt="navigation" /></button>
                         </span>
-                    </div>
+                    </div>*/}
                 </div>
             </header>
         </>

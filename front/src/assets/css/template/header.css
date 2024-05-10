@@ -1,9 +1,10 @@
-.header {background: #4c4c4c;transition: background-color .3s ease-in;}
-.header > .inner {width:100%;max-width:1200px;margin:0 auto;display:flex;align-items: center;justify-content: space-between;padding:0 20px;}
+.header {position:fixed;top:0;left:0;width:100%;background: transparent;transition: background-color .3s ease-in;z-index:3;}
+.header > .inner {width:100%;max-width:1200px;margin:0 auto;display:flex;align-items: center;justify-content: space-between;padding:10px 20px;}
 
 .header > .inner .gnb-list,
 .header > .inner .util-list {display:flex;align-items: center;justify-content: center;gap:10px;}
 
+.header > .inner .left {display:flex;align-items: center;justify-content: flex-start;gap:10px;}
 .header > .inner .gnb-list a {font-weight:700;padding:20px 0;color:#fff;}
 .header .gnb-list a.is-active {position:relative;display:block;color: #ffb600}
 .header .gnb-list a.is-active::before {content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background: #ffb600;}
@@ -61,17 +62,28 @@
     display:none;
     font-size:0;
 }
-.header button {
+.header .left button {
     border:0;
-    background:transparent;
+    background: #080c7d;
     max-width:50px;
     padding:4px;
     cursor: pointer;
+    box-shadow:5px 5px 5px rgba(0,0,0,.3);
+    border: 3px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
 }
-.header button img {
+.header .left button:hover {
+    border: 3px solid rgba(255, 255, 255, .7);
+    transition: border-color .2s linear;
+}
+.header .left button img {
     display:block;
     width:100%;
     max-width:100%;
+}
+.header .left button img:hover {
+    transition: transform .2s ease-out;
+    transform: rotate(180deg);
 }
 .header .m-btn-group.is-mobile {
     display:block;
