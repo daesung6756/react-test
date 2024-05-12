@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const filePath = path.join(__dirname, '../api/v1/resource/json/consolation.json');
+const tempFilePath = path.join(__dirname, '../api/v1/resource/json/consolation-temporary.json');
 
 function formatDateToYyyyMmDd() {
     // 현재 날짜 가져오기
@@ -36,7 +37,28 @@ exports.getAllConsolation = async (req, res) => {
         }
     });
 };
-
+exports.getTempConsolationSave = async (req, res) => {
+    try {
+        fs.readFile(tempFilePath, 'utf8', (err, data) => {
+            if (err) {
+                console.error('파일 읽기 오류:', err);
+                return res.status(500).json({ error: '파일을 읽는 중 오류가 발생했습니다.' });
+            }
+            try {
+                // JSON 데이터를 파싱
+                const jsonData = JSON.parse(data);
+                // JSON 데이터를 응답으로 보냄
+                res.json(jsonData);
+            } catch (parseErr) {
+                // JSON 파싱 중 에러가 발생하면 에러를 응답으로 보냄
+                res.status(500).send('JSON 파싱 중 오류가 발생했습니다.');
+            }
+        })
+    } catch (error) {
+        console.error('에러:', error);
+        res.status(500).json({ error: '데이터 추가 중 오류가 발생했습니다.' });
+    }
+};
 exports.createConsolation = async (req, res) => {
     try {
         // JSON 파일 읽기

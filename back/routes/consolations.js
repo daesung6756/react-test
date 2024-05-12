@@ -3,7 +3,8 @@ const router = express.Router();
 const consolationController = require('../controllers/consolationController');
 
 router.get('/', consolationController.getAllConsolation);
-router.post('/', consolationController.createConsolation);
+router.post('/', consolationController.getTempConsolationSave);
+
 
 
 module.exports = router;

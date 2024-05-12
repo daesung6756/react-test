@@ -11,6 +11,7 @@ const Home = () =>  {
     const [loadingBar, setLoadingBar] = useState(false);
     const [firstMsg, setFirstMsg] = useState(false);
     const [consolationData, setConsolationData] = useState(null);
+    const [consolationTempData, setConsolationTempData] = useState(null);
     const [inputValue, setInputValue] = useState("");
 
     const handleInputChange = (event) => {
@@ -35,8 +36,20 @@ const Home = () =>  {
             }
         }
 
-        getConsolationFetchData();
+        // consolation temp
+        async function getConsolationTempFetchData() {
+            try {
+                const response = await axios.get('/api/consolations/temp');
+                setConsolationTempData(response.data);
+                setLoadingBar(false);
+            } catch (err) {
+                console.log(err)
+                setLoadingBar(false);
+            }
+        }
 
+        getConsolationTempFetchData();
+        getConsolationFetchData();
     }, []);
 
     const consolationGetMessage = () => {
@@ -54,10 +67,13 @@ const Home = () =>  {
     const postMessage = async () => {
         const trimmedValue = inputValue.trim();
         if (!trimmedValue) {
-            // 입력 값이 비어 있거나 공백만 있는 경우 경고 메시지 표시
             alert('내용을 입력하세요.');
             return;
+        } else if(trimmedValue.length <= 25) {
+            alert('최소 25자 이상 작성해야 합니다.');
+            return;
         }
+
         try {
             const response = await axios.post('/api/consolations' ,{
                 message : inputValue
@@ -87,13 +103,36 @@ const Home = () =>  {
 
                     <div className="consolation-wrap">
                         <div className="message-input-wrap">
-                            <p className="title">내가 위로 해줄께. (위로의 말 남기기)</p>
+                            <p className="title">듣고 싶은 위로의 메세지 남기기</p>
                             <fieldset className="input-button-field">
                                 <input type="text"
                                        value={inputValue}
+                                       placeholder="25자 이상 남겨주세요."
                                        onChange={e => handleInputChange(e)} />
                                 <button onClick={e => postMessage(e)}>SEND</button>
                             </fieldset>
+                            <div className="temp-message-wrap">
+                                <ul className="temp-list">
+                                    {
+                                        consolationTempData ?
+                                        consolationTempData.map((item , key) => {
+                                            return(
+                                                <li key={key}>
+                                                    <div>
+                                                        <p>{item.number}.{item.message}</p>
+                                                        <span>{item.createDate}</span>
+                                                    </div>
+                                                    <div>
+                                                        <button>승인</button>
+                                                        <button>삭제</button>
+                                                    </div>
+                                                </li>
+                                            )
+                                        }) : false
+                                    }
+
+                                </ul>
+                            </div>
                         </div>
                         <div className="button-wrap"><button onClick={consolationGetMessage} disabled={loadingBar ? true : false}>{loadingBar ? "답변 중" : "상담"}</button></div>
                         <div className={`circle-wrap ${loadingBar ? "is-ani" : ""}`}>
@@ -108,6 +147,16 @@ const Home = () =>  {
                     </div>
 
                 </div>
+            </section>
+
+            <section className="section">
+                <Titles
+                    classAdd={"section-title"}
+                    type={"2"}
+                    align={"center"}
+                    description={"비지니스 모델이 실패하는 이유는 뭘까?"}
+                    descriptionAlign={"left"}
+                >원하는 사람이 없다.</Titles>
             </section>
 
         </div>

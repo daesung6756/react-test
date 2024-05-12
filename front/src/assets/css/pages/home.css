@@ -1,9 +1,12 @@
+.home .consolation-wrap {position:relative;}
 .home .message-input-wrap {z-index:2;padding-left:20px;}
 .home .message-input-wrap .title {color:#fff;font-size:16px;line-height:22px}
 .home .message-input-wrap .input-button-field {margin-top:10px;}
 .home .message-input-wrap .input-button-field input{width:100%;max-width:260px;}
 .home .message-input-wrap .input-button-field button {background-color:#a765ff;color:#fff;font-weight:700;}
 .home .message-input-wrap .input-button-field button:hover {transition: background-color .2s linear;background-color: #c090ff}
+.home .temp-message-wrap {position:absolute;top:70px;left:22px;width:100%;max-width:340px;height:200px;background:rgba(255,255,255,.7);overflow:hidden;overflow-y:auto;}
+.home .temp-message-wrap .temp-list > li {display:flex;align-items: stretch;justify-content:space-between;width:100%;padding:5px 10px;font-size:13px;line-height:19px;}
 
 .home .consolation {position:relative;background: #370f71;}
 .home .consolation > #canvas {position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;opacity:.4}
